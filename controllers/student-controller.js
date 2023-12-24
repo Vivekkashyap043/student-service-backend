@@ -11,7 +11,8 @@ export const signup = async (req,res, next) =>{
             console.log("already registered");
             return res.send("unsuccess")
         }
-        student = new Student({sid, name, password:hashedPassword, gender, email, phone});
+        let status = "Not applied";
+        student = new Student({sid, name, password:hashedPassword, gender, email, phone, idcardStatus: status, bonafideStatus: status});
         student = await student.save();
     }catch(err){
         console.log("internal error ", err)

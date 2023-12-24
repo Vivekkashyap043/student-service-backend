@@ -27,6 +27,12 @@ const StudentSchema = new Schema({
         type: String,
         required: true,
     },
+    idcardStatus:{
+        type: String
+    },
+    bonafideStatus:{
+        type: String
+    },
 
 })
 
